@@ -70,7 +70,7 @@ def answer_rule_question(question: str) -> str:
 
 
 def main():
-    parser = argparse.ArgumentParser(description="NFL Rules & Analytics Copilot (RAG)")
+    parser = argparse.ArgumentParser(description="NFL Rules & Analytics Assistant (RAG)")
     parser.add_argument(
         "mode",
         choices=["rule-explain"],
@@ -80,7 +80,7 @@ def main():
         "question",
         type=str,
         nargs="+",
-        help="Question to ask the copilot.",
+        help="Question to ask the assistant.",
     )
     args = parser.parse_args()
 
