@@ -66,6 +66,18 @@ All answers are **grounded in your local text**, not just the model’s general 
      - Instructions to **only** use the provided context and say “I don’t know” if needed.
    - Call an OpenAI chat model (e.g. `gpt-5.1-mini`) to generate the final explanation.
 
+### 🆚 Compare two rules
+
+Use the `rule-compare` mode to compare two penalties or rules side-by-side.
+
+Examples:
+
+```bash
+py src/nfl_assistant.py rule-compare "Compare defensive pass interference and offensive pass interference"
+py src/nfl_assistant.py rule-compare "Compare DPI and OPI"
+py src/nfl_assistant.py rule-compare "Compare illegal contact vs defensive holding"
+```
+
 ## ⚠️ Limitations
 
 - The assistant only knows what you put under `data/`. If a rule or concept
