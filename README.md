@@ -6,7 +6,7 @@
 
 ---
 
-## 🔍 What it does
+## What it does
 
 - Ingests text from the **NFL rulebook** and your own **analytics notes**
 - Stores that knowledge in a local **vector database**
@@ -22,23 +22,23 @@ All answers are **grounded in your local text**, not just the model’s general 
 
 ---
 
-## ✨ Features
+## Features
 
-- 📚 **RAG over NFL rules & notes**  
+- **RAG over NFL rules & notes**  
   - Load your own `rulebook.txt` and analytics text files
   - Chunk + embed them into a local ChromaDB index
 
-- 🧠 **LLM-powered rule explanations**  
+- **LLM-powered rule explanations**  
   - Ask natural language questions like:
     - `What is defensive pass interference?`
     - `How is offensive pass interference enforced?`
   - The assistant uses only retrieved context to build answers
 
-- 🛡️ **Grounded, low-hallucination design**  
+- **Grounded, low-hallucination design**  
   - Prompt explicitly tells the model to use **only** provided context
   - If something isn’t in your data, it’s allowed to say “I don’t know”
 
-## 🧱 Tech stack
+## Tech stack
 
 - **Language:** Python
 - **LLM:** OpenAI (chat + embedding APIs)
@@ -46,7 +46,7 @@ All answers are **grounded in your local text**, not just the model’s general 
 - **Config:** dotenv (`.env` for secrets)
 - **Interface:** Command-line (CLI) for now
 
-## 🧠 How it works (architecture)
+## How it works (architecture)
 
 1. **Ingestion & chunking**
    - Load `.txt` files under `data/rulebook/` and `data/analytics/`.
@@ -66,7 +66,7 @@ All answers are **grounded in your local text**, not just the model’s general 
      - Instructions to **only** use the provided context and say “I don’t know” if needed.
    - Call an OpenAI chat model (e.g. `gpt-5.1-mini`) to generate the final explanation.
 
-### 🆚 Compare two rules
+### Compare two rules
 
 Use the `rule-compare` mode to compare two penalties or rules side-by-side.
 
@@ -78,7 +78,7 @@ py src/nfl_assistant.py rule-compare "Compare DPI and OPI"
 py src/nfl_assistant.py rule-compare "Compare illegal contact vs defensive holding"
 ```
 
-## ⚠️ Limitations
+## Limitations
 
 - The assistant only knows what you put under `data/`. If a rule or concept
   isn’t included there, it may honestly say it doesn’t know.
