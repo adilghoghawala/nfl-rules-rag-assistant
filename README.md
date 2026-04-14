@@ -1,4 +1,4 @@
-# nfl-rules-rag-assistant 🏈
+# nfl-rules-rag-assistant 
 
 **nfl-rules-rag-assistant** is a small GenAI project that uses a  
 **Retrieval-Augmented Generation (RAG)** pipeline to explain NFL rules  
@@ -91,7 +91,7 @@ py src/nfl_assistant.py rule-compare "Compare illegal contact vs defensive holdi
 
 ---
 
-## 🗂 Project structure
+## Project structure
 
 ```text
 nfl-rules-rag-assistant/
